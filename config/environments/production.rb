@@ -1,4 +1,12 @@
 Rails.application.configure do
+   
+  # devise says to define default url
+  config.action_mailer.default_url_options = { :host => 'sid-saas-app.herokuapp.com', :protocol => 'https' }
+
+  ActionMailer::Base.delivery_method = :smtp
+
+
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
